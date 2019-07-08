@@ -1,0 +1,45 @@
+{{ define "write" }}
+
+{{ template "header" }}
+
+<div class="row">
+    <div class="col-xs-4">
+    </div>
+    <div class="col-xs-4">
+        <form role="form" method="POST" action="/SavePost">
+            <input type="hidden" name="id" value="{{.ID}}" />
+            <div class="form-group">
+                <label>Name</label>
+                <input type="text" class="form-control" id="name" name="name" value="{{.Name}}" />
+            </div>
+            <div class="form-group">
+                <label>RAM</label>
+                <input type="text" class="form-control" id="ram" name="ram" value="{{.RAM}}" />
+            </div>
+            <div class="form-group">
+                <label>CPU</label>
+                <input type="text" class="form-control" id="cpu" name="cpu" value="{{.CPU}}" />
+            </div>
+            <div class="form-group">
+                <label>SSD</label>
+                <input type="text" class="form-control" id="ssd" name="ssd" value="{{.Ssd}}" />
+            </div>
+            <div class="form-group">
+                <label>SATA</label>
+                <input type="text" class="form-control" id="sata" name="sata" value="{{.Sata}}" />
+            </div>
+
+
+
+            <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+
+    </div>
+    <div class="col-xs-4">
+
+    </div>
+</div>
+
+{{ template "footer" }}
+
+{{ end }}

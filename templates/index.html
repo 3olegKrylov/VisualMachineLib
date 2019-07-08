@@ -1,0 +1,31 @@
+{{define "index"}}
+
+{{ template "header"}}
+
+<h1>Click on the link for EDIT VM</h1>
+{{range $key, $value := .}}
+<div class = "row">
+    <div class = "col-xs-2">
+    </div>
+    <div class = "col-xs-8">
+        <h1><a href = "/edit?id={{$value.ID}}"> visual machine WITH name "{{ $value.Name }}"</a></h1>
+    </div>
+
+    <div class = "col-xs-2">
+
+    </div>
+</div>
+<div class = "row">
+    <div class = "col-xs-2">
+    </div>
+
+    <div class = "col-xs-8">
+       ID:{{$value.ID}}     Name:{{$value.Name}}     RAM:{{$value.RAM}}    CPU:{{$value.CPU}}    Ssd:{{$value.Ssd}}    Sata:{{$value.Sata}}
+    </div>
+
+    <div class = "col-xs-2">
+    </div>
+</div>
+{{end}}
+{{template "footer"}}
+{{end}}
